@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gris: #f3f3f3;
+    --verde: #6cb500;
+    --gris_menu: #f3f3f3;
+    --negro: #333;
+    --blanco: #fff;
+    --tipografia: Arimo;
+}
+
+body {
+    font-family: var(--tipografia);
+    font-size: 16px;
+    color: var(--negro);
+    line-height: 24px;
+}
+
+.ancho {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: var(--gris_menu);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+nav img {
+    width: 180px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--verde);
+}
+
+.slide {
+    position: relative;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.slide-texto {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--blanco);
+    font-weight: 400;
+    z-index: 1; /* sobre la imagen */
+}
+
+.slide-texto h1 {
+    max-width: 500px;
+    line-height: 1.2;
+}
+
+.servicios {
+    margin-bottom: 50px;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.servicios h3 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 50px;
+    color: var(--verde);
+}
+
+.tarjetas-servicios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.tarjeta-servicio {
+    background-color: var(--gris);
+    padding: 50px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tarjeta-servicio figure {
+    text-align: center;
+}
+
+.tarjeta-servicio figure img {
+    width: 100px;
+    height: auto;
+}
+
+.tarjeta-servicio h3 {
+    color: var(--verde);
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-servicio p {
+    font-weight: 400;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--verde);
+    padding: 20px 0;
+
+}
+
+footer img {
+    width: 180px;
+}
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+    .ancho {
+        padding: 0 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav img {
+        width: 150px;
+    }
+
+    .tarjetas-servicios {
+        flex-direction: column;
+    }
+
+    .tarjeta-servicio {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .slide-texto h1 {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+
+    .servicios h2 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .servicios h3 {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    footer img {
+        width: 150px;
+    }
+}
