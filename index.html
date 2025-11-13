@@ -7,13 +7,17 @@
     <title>Tarea 1</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <header>
         <nav class="ancho">
             <img src="imagenes/logo_arriba.png" alt="logo arriba">
-            <ul>
+            <button id="iconomenu" class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="cajamenu">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Nuestros Productos</a></li>
@@ -42,21 +46,33 @@
                 <figure>
                     <img src="imagenes/icono2.png" alt="icono2">
                 </figure>
-                <h3>Ganado Vacuno</h3>
-                <p>Carne de res producida sin ingeniería genética, uso de radiación ionizante o lodos de depuradora</p>
+                <h3>Productos Lácteos</h3>
+                <p>Los productos lácteos como la leche, el queso y el yogur contienen los nutrientes que su cuerpo necesita</p>
             </article>
             <article class="tarjeta-servicio">
                 <figure>
                     <img src="imagenes/icono3.png" alt="icono3">
                 </figure>
-                <h3>Ganado Vacuno</h3>
-                <p>Carne de res producida sin ingeniería genética, uso de radiación ionizante o lodos de depuradora</p>
+                <h3>Frutas de la Huerta</h3>
+                <p>Cubre todo lo que necesita saber para cultivar y comercializar con éxito sus propias frutas orgánicas de huerta</p>
             </article>
         </div>
     </section>
     <footer>
         <img src="imagenes/logo_abajo.png" alt="logo abajo">
     </footer>
+    <!-- FUNCIONES DE JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // SCRIPT PARA EL MENU DESPLEGABLE
+        $("#iconomenu").click(function () {
+            $("#cajamenu").slideToggle();
+        });
+
+        $("#btn_mostrar").click(function () {
+            $("#fotocodigo").slideToggle();
+        });
+    </script>
 </body>
 
 </html>

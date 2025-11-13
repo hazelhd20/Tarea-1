@@ -58,6 +58,20 @@ nav ul li a:hover {
     color: var(--verde);
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--negro);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle:hover {
+    color: var(--verde);
+}
+
 .slide {
     position: relative;
 }
@@ -78,7 +92,8 @@ nav ul li a:hover {
     right: 0;
     color: var(--blanco);
     font-weight: 400;
-    z-index: 1; /* sobre la imagen */
+    z-index: 1;
+    /* sobre la imagen */
 }
 
 .slide-texto h1 {
@@ -157,16 +172,43 @@ footer img {
         padding: 0 20px;
     }
 
+    #cajamenu {
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        text-align: left;
+        padding: 15px 0;
+        border-bottom: 1px dotted #333;
+    }
+
     nav {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    nav img {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     nav ul {
+        display: none;
         flex-direction: column;
         gap: 10px;
         text-align: center;
         width: 100%;
+        background-color: var(--gris_menu);
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        order: 3;
     }
 
     nav img {
@@ -194,7 +236,8 @@ footer img {
 
     .servicios h3 {
         font-size: 1rem;
-        margin-bottom: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     footer img {
